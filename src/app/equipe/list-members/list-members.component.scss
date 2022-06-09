@@ -1,0 +1,7 @@
+.list-group-item .delete-member {
+  display:none;
+}
+
+.list-group-item:hover .delete-member {
+  display:block;
+}

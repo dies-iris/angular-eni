@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-8">
+    <h2>Equipes</h2>
+    <app-new-team></app-new-team>
+    <app-list-teams [equipes]="equipes$ | async"></app-list-teams>
+  </div>
+  <div class="col-md-4">
+    <h2>Membres</h2>
+    <app-new-member [equipes]="equipes$ | async"></app-new-member>
+    <app-list-members></app-list-members>
+  </div>
+</div>
+

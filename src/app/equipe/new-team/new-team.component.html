@@ -1,0 +1,6 @@
+<form class="row-cols-2 d-flex flex-row mt-3">
+  <div>
+    <input type="text" class="form-control" id="equipeName" name="equipeName" placeholder="Nom de l'équipe" [(ngModel)]="equipeName" >
+  </div>
+  <button type="submit" class="btn-primary btn" (click)="addGroup()" style="width: fit-content"><fa-icon [icon]="faplus"></fa-icon></button>
+</form>

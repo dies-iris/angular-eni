@@ -1,0 +1,14 @@
+<div class="d-flex flex-row flex-wrap row-cols-3 gx-3 mt-3">
+  <div *ngFor="let equipe of equipes; let i = index" class="card border-secondary mb-3 me-3" style="max-width: 20rem;">
+    <div class="card-body">
+      <h4 class="card-title">{{equipe.name}}</h4>
+      <button class="btn btn-danger delete-group" (click)="deleteEquipe(i)"><fa-icon [icon]="faEraser"></fa-icon></button>
+      <ul class="list-group mt-3">
+        <li *ngFor="let member of equipe.members" class="list-group-item">
+          {{member.lastName + ' ' + member.firstName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

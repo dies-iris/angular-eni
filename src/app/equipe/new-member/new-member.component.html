@@ -1,0 +1,15 @@
+<div>
+  <div class="row mt-3">
+    <input type="text" class="form-control" id="firstName" placeholder="Prénom" name="firstName" [(ngModel)]="newMember.firstName" >
+  </div>
+  <div class="row mt-3">
+    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nom" [(ngModel)]="newMember.lastName" >
+  </div>
+  <div class="row mt-3">
+    <select class="form-control form-select" id="selectGroup" [(ngModel)]="group" >
+      <option [ngValue]="null">Pas d'équipe</option>
+      <option *ngFor="let equipe of equipes" [ngValue]="equipe">{{equipe.name}}</option>
+    </select>
+  </div>
+  <button class="btn-primary btn mt-3" (click)="addMember()" >Ajouter membre</button>
+</div>

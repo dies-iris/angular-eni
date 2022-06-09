@@ -1,0 +1,16 @@
+<ul class="list-group mt-3 mb-3">
+  <li *ngFor="let appareil of appareils; let i = index" class="list-group-item list-group-item-action d-flex justify-content-lg-start">
+    <div class="form-check form-switch">
+      <input class="form-check-input" [(ngModel)]="appareil.isOn" type="checkbox" id="on">
+    </div>
+    {{appareil.name}}
+    <span class="badge rounded-pill ms-3"
+          [ngClass]="{
+          'bg-secondary': appareil.isOn,
+          'bg-danger': !appareil.isOn
+          }">{{appareil.isOn ? 'ON' : 'OFF'}}</span>
+  </li>
+</ul>
+<button class="btn btn-primary" (click)="toutAllumer(true)">Tout allumer</button>
+<button class=" ms-3 btn btn-secondary" (click)="toutAllumer(false)">Tout éteindre</button>
+

@@ -1,0 +1,11 @@
+<div *ngIf="win" class="m-auto text-center mt-5">
+  <img src="assets/win.png">
+  <h1>Victoire méritée, young padavan !</h1>
+</div>
+<div *ngIf="!win" class="m-auto text-center mt-5">
+  <img src="assets/lose.png">
+  <h1>Garde ton zen, young padavan !</h1>
+</div>
+<div class="text-center">
+  <a class="btn btn-link text-secondary m-auto" routerLink="/">Recommencer</a>
+</div>

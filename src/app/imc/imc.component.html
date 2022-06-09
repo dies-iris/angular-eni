@@ -1,0 +1,20 @@
+<form class="col-md-6 m-auto">
+  <legend>IMC</legend>
+  <div class="form-group mt-3">
+    <label class="form-label">Poids <span class="badge rounded-pill bg-secondary">kg</span></label>
+    <div>
+      <input type="number" class="form-control" id="poids" name="poids" [(ngModel)]="poids" >
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <label class="form-label">Taille <span class="badge rounded-pill bg-secondary">cm</span></label>
+    <div >
+      <input type="number" class="form-control" id="taille" name="taille" [(ngModel)]="taille" >
+    </div>
+  </div>
+  <button class="btn-primary btn mt-3" (click)="calculerImc()" >Calculer IMC</button>
+</form>
+
+<div *ngIf="imc && message" class="alert alert-success mt-5 col-md-6 m-auto" [ngClass]=" 'alert-' + color">
+  <strong>IMC : {{imc}}</strong> {{message}}
+</div>

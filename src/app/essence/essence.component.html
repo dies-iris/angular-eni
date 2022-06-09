@@ -1,0 +1,20 @@
+<form class="col-md-6 m-auto">
+  <legend>Consommation essence</legend>
+  <div class="form-group mt-3">
+    <label class="form-label">Distance parcourue <span class="badge rounded-pill bg-secondary">km</span></label>
+    <div>
+      <input type="number" class="form-control" id="distance" name="distance" [(ngModel)]="distance" >
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <label class="form-label">Litres consommés <span class="badge rounded-pill bg-secondary">l</span></label>
+    <div >
+      <input type="number" class="form-control" id="essence" name="essence" [(ngModel)]="essence" >
+    </div>
+  </div>
+  <button class="btn-primary btn mt-3" (click)="calculerEssence()" >Calculer consommation</button>
+</form>
+
+<div *ngIf="result" class="alert alert-success mt-5 col-md-6 m-auto" >
+  <strong>Consommation par 100km : {{result}}</strong>
+</div>

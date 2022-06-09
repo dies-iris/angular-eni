@@ -1,0 +1,6 @@
+<ul class="list-group mt-3">
+  <li *ngFor="let member of (members$ | async); let i = index" class="list-group-item list-group-item-action">
+    {{member.lastName + ' ' + member.firstName}}
+    <button class="btn btn-danger me-0 delete-member" (click)="deleteMember(i)" style="position: absolute; right: 0; top: 2px;"><fa-icon [icon]="faEraser"></fa-icon></button>
+  </li>
+</ul>

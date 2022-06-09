@@ -1,0 +1,28 @@
+<figure class="mt-5">
+  <blockquote class="blockquote">
+    <h1 *ngIf="enigme?.wisdom" class="mb-0">{{enigme!.wisdom!}}</h1>
+
+  </blockquote>
+  <figcaption *ngIf="cookie?.quoteAuthor" class="blockquote-footer">
+    {{cookie!.quoteAuthor!}}
+  </figcaption>
+</figure>
+
+<form class="row-cols-2 d-flex flex-row mt-5">
+  <div>
+    <input type="text" class="form-control col-md-4" id="response" name="response" placeholder="Mot response" [(ngModel)]="response" [ngClass]="{'disabled': responseCorrect}">
+  </div>
+  <button type="submit" class="btn-primary btn ms-3 me-3 col-md-1" [ngClass]="{'disabled': responseCorrect}" (click)="checkResponse()" ><fa-icon [icon]="facheck"></fa-icon></button>
+</form>
+<a class="btn-link btn" (click)="skip()">Skip (-2 points)</a>
+
+<h2 class="text-secondary text-center mt-5">Your score: {{score}}</h2>
+
+<div *ngIf="showMessage" class="alert mt-5" [ngClass]="{'alert-success': responseCorrect, 'alert-danger': !responseCorrect}">
+  <strong>{{responseCorrect ? 'Well done!' : 'Nope, try again !'}}</strong>.
+</div>
+
+
+
+
+
